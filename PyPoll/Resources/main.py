@@ -71,5 +71,7 @@ else otooley > max(khan_percent, correy_percent, li_percent)
 
 #Print
 
-
-
+print(f"Election Results") = "\n"
+print (f"---------------") + "\n"
+print (f"Total Votes: {total_votes}") +"\n"
+print(f"----------------") + "\n"
