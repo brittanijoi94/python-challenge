@@ -6,10 +6,10 @@ import csv
 #working directory 
 
 csvpath = os.path.join("Pypoll", "resources", "election_data.csv")
-with open (csvpath) as csvfile 
-    csvreader = csv.reader(csvfile, delimiter=',')
+with open(csvpath) as csvfile
+    csvreader = csv.reader(csv_file, delimiter=',')
     print(csvreader)
-    csv_header + next(csvreader)
+   
 
     #declaring variables 
     votes = []
