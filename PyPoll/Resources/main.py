@@ -46,7 +46,7 @@ with open(csvpath) as csvfile
         print(khan_votes)
         print(correy_votes)
         print(li_votes)
-        print(otooley_voted)
+        print(otooley_votes)
                 
         
 
