@@ -25,6 +25,20 @@ with open(csvpath) as csvfile
         county.append(row[1])
         candidates.append(row[2])
 
-        #VOTE COUNT 
+        #vote count
+        total_votes = (len(votes))
+        print(total_votes)
+
+        #votes by person
+        for candidate in candidates:
+            if candidate == "Khan":
+                khan.append(candidates)
+                khan_votes = len(khan)
+            elif candidate == "correy"
+                correy.append(candidates)
+                correy_votes = len(khan)
+                
         
+
+
 
