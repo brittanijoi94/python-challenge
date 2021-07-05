@@ -6,7 +6,7 @@ import csv
 #working directory 
 
 csvpath = os.path.join("Pypoll", "resources", "election_data.csv")
-with open(csvpath) as csvfile 
+with open (csvpath) as csvfile 
     csvreader = csv.reader(csvfile, delimiter=',')
     print(csvreader)
     csv_header + next(csvreader)
@@ -47,7 +47,16 @@ with open(csvpath) as csvfile
         print(correy_votes)
         print(li_votes)
         print(otooley_votes)
-                
+        
+        #percentages 
+        khan_percent = round(((khan_votes/total_votes) * 100 ), 2)
+        correy_percent = round(((khan_votes/total_votes)* 100 ), 2)
+        li_percent = round(((li_votes/total_votes)* 100 ), 2)
+        otooley_percent = round(((otooley_votes/total_votes)* 100 ), 2)
+        print(khan_percent)
+        print(correy_percent)
+        print(li_percent)
+        print(otooley_percent)
         
 
 
