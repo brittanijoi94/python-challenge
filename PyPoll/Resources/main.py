@@ -58,6 +58,18 @@ with open (csvpath) as csvfile
         print(li_percent)
         print(otooley_percent)
         
+#winner
+
+if khan_percent > max(correy_percent, li_percent, otooley_percent)
+    winner = khan
+elif correy_percent > max(khan_percent, li_percent, otooley_percent)
+    winner = correy
+elif li_percent > max(khan_percent, correy_percent, otooley_percent)
+    winner = li
+else otooley > max(khan_percent, correy_percent, li_percent)
+    winner = otooley
+
+#Print
 
 
 
