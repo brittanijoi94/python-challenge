@@ -6,8 +6,8 @@ import csv
 #working directory 
 
 csvpath = os.path.join("Pypoll", "resources", "election_data.csv")
-with open(csvpath) as csvfile
-    csvreader = csv.reader(csv_file, delimiter=',')
+with open(csvpath) as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=',')
     print(csvreader)
    
 
@@ -29,20 +29,21 @@ with open(csvpath) as csvfile
         total_votes = (len(votes))
         print(total_votes)
 
-        #votes by person
-        for candidate in candidates:
-            if candidate == "Khan":
-                khan.append(candidates)
-                khan_votes = len(khan)
-            elif candidate == "correy"
-                correy.append(candidates)
-                correy_votes = len(khan)
-            elif candidate == "li"
-                li.append(candidates)
-                li_votes = len(li)
-            else canidates == "otooley"
-                otooley.append(candidates)
-                otooley_votes = len(otooley)
+#votes by person
+    for candidate in candidates:
+        if candidate == "Khan":
+            khan.append(candidates)
+            khan_votes = len(khan)
+        elif candidate == "correy":
+            correy.append(candidates)
+            correy_votes = len(khan)
+        elif candidate == "li":
+            li.append(candidates)
+            li_votes = len(li)
+        else: 
+            otooley.append(candidates)
+            otooley_votes = len(otooley)
+
         print(khan_votes)
         print(correy_votes)
         print(li_votes)
@@ -60,14 +61,14 @@ with open(csvpath) as csvfile
         
 #winner
 
-if khan_percent > max(correy_percent, li_percent, otooley_percent)
-    winner = khan
-elif correy_percent > max(khan_percent, li_percent, otooley_percent)
-    winner = correy
-elif li_percent > max(khan_percent, correy_percent, otooley_percent)
-    winner = li
-else otooley > max(khan_percent, correy_percent, li_percent)
-    winner = otooley
+if khan_percent > max(correy_percent, li_percent, otooley_percent):
+    winner = "khan"
+elif correy_percent > max(khan_percent, li_percent, otooley_percent):
+    winner = "correy"
+elif li_percent > max(khan_percent, correy_percent, otooley_percent):
+    winner = "li"
+else:
+    winner = "otooley"
 
 #Print
 
