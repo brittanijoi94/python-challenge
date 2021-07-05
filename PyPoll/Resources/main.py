@@ -37,6 +37,16 @@ with open(csvpath) as csvfile
             elif candidate == "correy"
                 correy.append(candidates)
                 correy_votes = len(khan)
+            elif candidate == "li"
+                li.append(candidates)
+                li_votes = len(li)
+            else canidates == "otooley"
+                otooley.append(candidates)
+                otooley_votes = len(otooley)
+        print(khan_votes)
+        print(correy_votes)
+        print(li_votes)
+        print(otooley_voted)
                 
         
 
