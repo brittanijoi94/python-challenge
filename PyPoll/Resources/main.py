@@ -71,8 +71,14 @@ else otooley > max(khan_percent, correy_percent, li_percent)
 
 #Print
 
-print(f"Election Results") = "\n"
-print (f"---------------") + "\n"
-print (f"Total Votes: {total_votes}") +"\n"
-print(f"----------------") + "\n"
-print(f"Khan: {khan_percent}% ({khan_votes})") + "\n"
+print("Election Results")
+print("---------------") 
+print("Total Votes: {total_votes}")
+print("----------------")
+print("khan: {khan_percent}% ({khan_votes})")
+print("correy: {correy_percent}% ({correy_votes})")
+print("li: {li_percent}% ({li_votes})")
+print("otooley: {otooley_percent}% ({otooley_votes})")
+print("----------------")
+print("winner")
+print("-----------------")
