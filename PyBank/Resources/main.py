@@ -31,6 +31,15 @@ with open(csvpath) as csvfile:
 
     for i in range(len(profit_losses)):
         monthly_change.append(int(profit_losses[i+1] - int(profit_losses[i]))
-        #print(int(profit_losses[i+1])-int(profit_losses[i]))
-        #print(i)
-        #monthly_change.append(profit_losses[row=1]-profit_losses[row])
+        print(int(profit_losses[i+1])-int(profit_losses[i]))
+        print(i)
+        monthly_change.append(profit_losses[row=1]-profit_losses[row])
+
+print(profit_losses[2])
+print(range(len(profit_losses)))
+ print("financial analysis")
+print("---------------")
+print("Total months: " + str(total_months))
+print("Total: $" + str(net_total))
+print(dates)
+print(profit_losses)

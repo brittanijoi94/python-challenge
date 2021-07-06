@@ -8,7 +8,7 @@ import csv
 csvpath = os.path.join("Pypoll", "resources", "election_data.csv")
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-    print(csvreader)
+   
    
 
     #declaring variables 
@@ -21,7 +21,7 @@ with open(csvpath) as csvfile:
     otooley = []
 
     for row in csvreader:
-        votes.append(int(row[0]))
+        votes.append(int(row[0])
         county.append(row[1])
         candidates.append(row[2])
 
@@ -36,7 +36,7 @@ with open(csvpath) as csvfile:
             khan_votes = len(khan)
         elif candidate == "correy":
             correy.append(candidates)
-            correy_votes = len(khan)
+            correy_votes = len(correy)
         elif candidate == "li":
             li.append(candidates)
             li_votes = len(li)
@@ -50,10 +50,10 @@ with open(csvpath) as csvfile:
         print(otooley_votes)
         
         #percentages 
-        khan_percent = round(((khan_votes/total_votes) * 100 ), 2)
-        correy_percent = round(((khan_votes/total_votes)* 100 ), 2)
-        li_percent = round(((li_votes/total_votes)* 100 ), 2)
-        otooley_percent = round(((otooley_votes/total_votes)* 100 ), 2)
+        khan_percent = round((("khan_votes/total_votes") * 100 ), 2)
+        correy_percent = round((("correy_votes/total_votes")* 100 ), 2)
+        li_percent = round((("li_votes/total_votes")* 100 ), 2)
+        otooley_percent = round((("otooley_votes/total_votes")* 100 ), 2)
         print(khan_percent)
         print(correy_percent)
         print(li_percent)
@@ -72,14 +72,14 @@ else:
 
 #Print
 
-print("Election Results")
-print("---------------") 
-print("Total Votes: {total_votes}")
-print("----------------")
-print("khan: {khan_percent}% ({khan_votes})")
-print("correy: {correy_percent}% ({correy_votes})")
-print("li: {li_percent}% ({li_votes})")
-print("otooley: {otooley_percent}% ({otooley_votes})")
-print("----------------")
-print("winner")
-print("-----------------")
+print(f"Election Results") + "\n"
+print(f"---------------") + "\n"
+print(f"Total Votes") + "\n"
+print(f"----------------") + "\n"
+print(f"khan: {khan_percent}% ({khan_votes})") + "\n"
+print(f"correy: {correy_percent}% ({correy_votes})") + "\n"
+print(f"li: {li_percent}% ({li_votes})") + "\n"
+print(f"otooley: {otooley_percent}% ({otooley_votes})") + "\n"
+print(f"----------------")
+print(f"winner {winner}") + "\n"
+print(f"-----------------") + "\"
