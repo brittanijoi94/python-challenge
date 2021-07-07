@@ -82,4 +82,4 @@ print(f"li: {li_percent}% ({li_votes})") + "\n"
 print(f"otooley: {otooley_percent}% ({otooley_votes})") + "\n"
 print(f"----------------")
 print(f"winner {winner}") + "\n"
-print(f"-----------------") + "\"
+print(f"-----------------") + "\n"

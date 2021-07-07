@@ -2,44 +2,40 @@ import os
 import csv
 
 
-csvpath = os.path.join("Pybank", "resources", "budget_data.csv")
+budget_data = os.path.join("Pybank", "resources", "budget_data.csv")
 
-with open(csvpath) as csvfile:
+with open(budget_data) as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter= ",")
-    print(csvreader)
-    csv_reader = next(csvreader, None)
+    
+    csv_header = next(csvreader, None)
 
     dates = []
     profit_losses = []
     monthly_change = []
-
-    print(f"header: {csv_header}")
+    revenue_change = []
+    
 
     for row in csvreader:
         dates.append(row[0])
-        profit_losses.append(row[1])
-    print(len(dates))
+        profit_losses.append(int(row[1]))
     
-    total_months = 0
-    for month in dates:
-        total_months += 1
+    
+    for x in range(1, len(profit_losses)):
+        revenue_change.append((int(profit_losses[x]) - int(profit_losses[x-1])))
 
-    net_total = 0
-    for row in profit_losses:
-        net_total += int(row)
+revenue_average = sum(revenue_change)/ len(revenue_change)
 
-    for i in range(len(profit_losses)):
-        monthly_change.append(int(profit_losses[i+1] - int(profit_losses[i]))
-        print(int(profit_losses[i+1])-int(profit_losses[i]))
-        print(i)
-        monthly_change.append(profit_losses[row=1]-profit_losses[row])
+total_dates = len(dates)
 
-print(profit_losses[2])
-print(range(len(profit_losses)))
- print("financial analysis")
-print("---------------")
-print("Total months: " + str(total_months))
-print("Total: $" + str(net_total))
-print(dates)
-print(profit_losses)
+greatest_increase = max(revenue_change)
+
+greatest_decrease = min(revenue_change)
+
+print("Financial Analysis")
+print("----------------------")
+print("total dates: " + str(total_dates))
+print("Total: " + "$" + str(sum(profit_losses)))
+print("Average change: " + "$" + str(revenue_average))
+print("Greatest Increase in Profits: " + str(dates[revenue_change.index(max(revenue_change))+1]) + " " + "$" + str(greatest_increase))
+print("Greatest Decrease in Profits: " + str(dates[revenue_change.index(min(revenue_change))+1]) + " " + "$" + str(greatest_decrease))
